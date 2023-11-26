@@ -1,0 +1,133 @@
+*{
+    font-family: cursive;
+}
+
+div{
+    background-color: whitesmoke;
+}
+
+body{
+    background-color: rgb(206, 250, 164);
+}
+
+hr{
+    display:grid ;
+}
+
+div span{
+    color: black;
+}
+
+div > .extra{
+    text-decoration-line: underline;
+
+}
+
+.mid-text{
+    font-family: fantasy;
+}
+
+h2{
+    font-size: 30px;
+}
+
+#head-text{
+    text-decoration-line:underline;
+    text-decoration-style:dotted;
+}
+
+input[disabled]{
+    background: #72efe8;
+}
+.style {
+    border-color: #27f231;
+    background-color: #74f27a;
+}
+
+
+a {
+    color: blue;
+  }
+  
+  /* Internal links, beginning with "#" */
+  a[href^="#"] {
+    background-color: gold;
+  }
+  
+  /* Links with "example" anywhere in the URL */
+  a[href*="example"] {
+    background-color: silver;
+  }
+  
+  /* Links with "insensitive" anywhere in the URL,
+     regardless of capitalization */
+  a[href*="insensitive" i] {
+    color: rgb(9, 32, 164);
+  }
+  
+
+  /* Links with "cAsE" anywhere in the URL,
+  with matching capitalization */
+  a[href*="cAsE" s] {
+    color: pink;
+  }
+  
+  /* Links that end in ".org" */
+  a[href$=".org"] {
+    color: red;
+  }
+  
+  /* Links that start with "https://" and end in ".org" */
+  a[href^="https://"][href$=".org"]
+  {
+    color: green;
+  }
+  
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+  
+.btn-primary {
+    color: rgb(228, 11, 199);
+    background-color: #27f231;
+    border-color: #e3ba36;
+}
+  
+.btn-primary:hover {
+    color: rgb(0, 0, 0);
+    background-color: #47e5f4;
+    border-color: #e41d1d;
+}
+  
+h2 ~ h4{
+    color: rgb(226, 51, 226);
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+button:hover{
+    color: rgb(209, 179, 237);
+}
+
+a:visited {
+    color: rgb(237, 20, 20);
+    text-decoration-color: rgb(9, 9, 8);
+}
+
+h2:hover{
+    /* text-decoration-color: rgb(226, 51, 226); */
+    text-decoration: none;
+}
