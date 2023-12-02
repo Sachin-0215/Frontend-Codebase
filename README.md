@@ -13,3 +13,5 @@
 # Day 6 - JavaScript ()
 
 # Day 7 - JavaScript ()
+
+# Day 8 - Scopes of Js 
