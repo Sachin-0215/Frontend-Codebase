@@ -7,6 +7,6 @@ function print() {
 }
 
 console.log("Ended");
-console.lo("hiiiie");
+console.lo("hiiii");
 let greeting = print();
 // console.log(greeting);
