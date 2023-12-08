@@ -1,0 +1,3 @@
+C++,Java, Python, JS etc is a vast languange , these PL require a lot of dedication
+
+HTML,CSS IS not as PL , only styling lang it is
