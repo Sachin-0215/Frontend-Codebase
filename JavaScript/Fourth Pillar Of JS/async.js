@@ -7,3 +7,4 @@ console.log("done");
 //1ms = 10^-3s
 
 //here according to this code , JS is asynchronus in nature
+//more learning
