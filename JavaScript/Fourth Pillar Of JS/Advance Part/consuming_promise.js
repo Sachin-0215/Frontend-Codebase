@@ -25,13 +25,20 @@ function createPromiseWithTimeOUT() {
     })
 }
 console.log("Starting");
-const P = createPromiseWithTimeOUT();
+const P = createPromiseWithTimeOUT();//P is global scope accesible everywhere
 console.log("We are now waiting for the promise to complete");
 console.log("Currently my promise object is like....", P);
 P.
     then(
-    function fullfillHandler(value) { console.log("Inside fullfill handler with value", value); },
-    function rejectionHandler(value) { console.log("Inside rejection handler with value", value); }
+        function fullfillHandler(value) {
+            console.log("Inside fullfill handler with value", value);
+            console.log("Promise after fullfillment is ", P);
+        },
+        function rejectionHandler(value) {
+            console.log("Inside rejection handler with value", value);
+            console.log("Promise after rejection is ", P);
+        }
+
 );
 
 console.log(P);
