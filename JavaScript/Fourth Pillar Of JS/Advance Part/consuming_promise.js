@@ -24,22 +24,61 @@ function createPromiseWithTimeOUT() {
         console.log("Exitting the executor callback in the promise constructor");
     })
 }
-console.log("Starting");
+
+
+console.log("Starting.....");
 const P = createPromiseWithTimeOUT();//P is global scope accesible everywhere
 console.log("We are now waiting for the promise to complete");
 console.log("Currently my promise object is like....", P);
+console.log("Going to register my 1st set of handlers");
+
 P.
     then(
         function fullfillHandler(value) {
-            console.log("Inside fullfill handler with value", value);
+            console.log("Inside fullfill handler 1 with value", value);
             console.log("Promise after fullfillment is ", P);
+            setTimeout(function t() {
+                console.log("Ended 1s timer")
+            }, 1000);
+            console.log("exiting full handler 1");
         },
         function rejectionHandler(value) {
-            console.log("Inside rejection handler with value", value);
+            console.log("Inside rejection handler 1 with value", value);
+            console.log("Promise after rejection is ", P);
+            setTimeout(function t() {
+                console.log("Ended 1s timer");
+            }, 1000);
+            console.log("exiting reject handler 1")
+        }
+
+);
+
+console.log("Going to register my 2nd set of handlers");
+
+P.
+    then(
+        function fullfillHandler2(value) {
+            console.log("Inside fullfill handler 2 with value", value);
+            console.log("Promise after fullfillment is ", P);
+        },
+        function rejectionHandler2(value) {
+            console.log("Inside rejection handler 2 with value", value);
             console.log("Promise after rejection is ", P);
         }
 
 );
 
-console.log(P);
-console.log(typeof P);
+console.log("Ending ");
+
+// for (let i = 0; i < 100000000; i++){
+//     //some work
+// }
+// console.log("Loop Ended Now");
+
+
+setTimeout(function () {
+    console.log("Global timer of 2000ms");
+}, 2000);
+
+// console.log(P);
+// console.log(typeof P);
