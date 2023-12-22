@@ -5,7 +5,8 @@ function download(url) {
         setTimeout(function down() {
             console.log("Download completed");
             const content = "ABCDEF";//asssume dummy download content here
-            resolve(content);
+            // resolve(content);
+            reject(content);
         }, 6000);
     });
 }
@@ -21,7 +22,6 @@ function writeFile(data) {
         }, 5000);
     });
 }
-
 //upload data
 function uploadData(file, url) {
     return new Promise(function exec(resolve, reject) {
@@ -34,25 +34,31 @@ function uploadData(file, url) {
     });
 }
 
-async function steps() {
-    console.log("Starting steps function execution");
-    const downloadData = await download("www.xyz.com");
-    console.log("Data downloaded is", downloadData);
-
-    const fileWrittendata = await writeFile(downloadData);
-    console.log("File written is", fileWrittendata);
-
-    const uploadResponse = await uploadData(fileWrittendata, "www.drive.com");
-    console.log("Upload response is", uploadResponse);
-    return uploadResponse;
-}
-
-steps().then((value) => console.log("we have completed steps with", value));
-
-console.log("outside");
-
-for (let i = 0; i < 100000000000000; i++) { }
-
-setTimeout(function f() { console.log("Timer done "); }, 400);
-
-console.log("loop done");
+download("www.xyz.com")
+    .then(
+        function processDownload(value) {//fullfillhandler
+            console.log("downloading done with following value", value);
+            return writeFile(value);
+        }
+    )
+    .then(
+        function processWrite(value) {//fullfillhandler
+            console.log("Data written in the file with name", value);
+            return uploadData(value, "www.upload.com");
+        }
+    )
+    .then(
+        function processuPLOAD(value) {//fullfillhandler
+            console.log("we have uploaded with", value);
+        }
+    )
+    .catch(
+        function f(err) {
+            console.log("catching error", err);
+        }
+    )
+    .finally(
+        function finalFunction() {
+            console.log("Final executed");
+        }
+    )
