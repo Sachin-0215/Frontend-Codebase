@@ -9,11 +9,11 @@ let array_of_product = {
             display() {
                 console.log("first display ", this);
             },
-            getCategory: function print() {
+            getCategory: () => {
                 console.log(this.category);
             }
         }
-            ,
+        ,
         {
             name: "Google Pixel 7",
             price: "91000",
@@ -23,12 +23,16 @@ let array_of_product = {
             display() {
                 console.log("second display ", this);
             },
-            getCategory: function print() {
+            getCategory: () => {
                 console.log(this.category);
+            },
+            getProduct: function () {
+                return (this.arr);
             }
         }
     ],
-    category:"Electronics"
+    category: "Electronics"
 }
 
-array_of_product.arr[0].getCategory();
+// array_of_product.arr[0].getCategory();
+array_of_product.getProduct()[0].getCategory();
