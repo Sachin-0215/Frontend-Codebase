@@ -2,7 +2,7 @@
 class Product{
     //Note : no need of let var const in the properties
     //properties
-    name;
+    #name;//private accessifiers
     price;
     discount;
     description;

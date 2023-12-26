@@ -1,4 +1,4 @@
-function Product(n,p,d){
+function Product(n, p, d) {
     this.name = n;
     this.price = p;
     this.description = d; 
