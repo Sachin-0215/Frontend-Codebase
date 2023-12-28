@@ -1,0 +1,34 @@
+Lecture 1. Static vs Dynamic Websites : 
+
+static websites are these kind of websites where the content doesn't change much or content can change but that is not user driven . Example Gyan ganga college website
+
+user driven type websites are Netflix where you can drive that by your own
+
+
+
+what is web app ? 
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Lecture 2 : DOM (document object model )
+this document that we are talking about is the html document
+
+when your browser has to read some basic html , it is render in a form of generic tree (node that have child 0 or more than 1 ) 
+
+			browser
+                   _______________
+                  |                          |                                                    			    <html>	
+		  |			      |											       <body>
+		  |	generic        |                                                                               
+	          |		tree	      |    	 	     									 	<p> </p>
+		  |			      |												        <h1></h1>
+		  |_ _____________|											</body>
+															    </html>			
+
+
+					   				refer link ---> dom image
+
+
+															
+
+link for diagram  : https://media.geeksforgeeks.org/wp-content/uploads/DOMExample-3-1.png
