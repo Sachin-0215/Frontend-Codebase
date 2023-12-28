@@ -1,0 +1,56 @@
+Lecture 3 : Starting with Pure React
+React JS -  Js library
+
+Pure react - in this we write complete JS
+
+
+_________________________________________________________________________________
+
+Lecture 4 :
+setting up react cdn (content delivery network)
+cdn - its a distributed network of server that are very fast
+
+
+
+
+_____________________________________________________________________________
+lecture 6:
+createElement method in React
+
+
+React element - According to official doc definition , it is a lighweight description of a piece of UI.
+In simple terms, a react element is a simple JS object describing what properties should inside in actual dom node 
+ By just creating a react element it won't automatically render on the dom ( you need to make some extra effort).
+
+
+
+How react element looks like : - 
+
+{
+	type : 'button'
+	props : { //props are attribute in an property that you are given in an html
+		className : 'btn btn-primary',
+		childeren : 'submit',
+	}
+} //this is react element that looks like
+
+		        ||
+		        V
+
+	equivalent html looks like this
+	
+	<button class='btn btn-primary'>
+			submit
+	</button>
+
+
+
+How to create new react element ? there is a function called as createElement()    -------> where is it ? ? when you included that react cdn inside html , inside then you get a react object
+
+
+How to use it ? 
+have three argument
+React.createElement(type,props,{ {optional arg .....}i.e children}
+____________________________________________________________
+				
+		
