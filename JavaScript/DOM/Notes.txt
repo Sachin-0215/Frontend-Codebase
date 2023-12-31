@@ -1,0 +1,52 @@
+Lecture 1. Static vs Dynamic Websites : 
+
+static websites are these kind of websites where the content doesn't change much or content can change but that is not user driven . Example Gyan ganga college website these website can't be driven by user
+
+user driven type websites are Netflix where you can drive that by your own
+
+
+
+what is web app ? 
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Lecture 2 : DOM (document object model )
+this document that we are talking about is the html document
+
+when your browser has to read some basic html elements, HTML is render in a form of tree (generic tree or nary tree (node that have child 0 or more than 1 ) ) 
+why tree because html elements is itself a hierachical kind of a tree, there exist a parent child relationship this html dom obj tree is actually prepare or render at runtime inside your corresponding browser internally .
+
+
+			browser
+                   _______________
+                  |                          |                                                    			    <html>	
+		  |			      |											       <body>
+		  |	generic        |                                                                               
+	          |		tree	      |    	 	     									 	<p> </p>
+		  |			      |												        <h1></h1>
+		  |______________|											</body>
+															    </html>			
+
+
+					   				refer link ---> dom image
+
+
+															
+
+link for diagram  : https://media.geeksforgeeks.org/wp-content/uploads/DOMExample-3-1.png
+reference link : https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+__________________________________________________________________________________________________________________________________________________________________________
+Lecture 3 : JS in HTML
+
+
+___________________________________________________________________________________________________________________________________________________________________________
+Lecture 4 : Script Tags
+Steps how browser loads websites when script tag is also present
+1. the browser fetch the html pages.
+2. It begins parsing the HTML pages and create a dom tree.
+3. while parsing it encounter the script tag refering the external file
+4. Browser request the external file and blocks the parser Hence parsing of html is halted
+5. Once the script is downloaded it is executed subsequently and parser restart
+
+
+Any (JS)  is capable to insert its own html doc using various function , That means the parser needs to wait until the script is not just downloaded but executed as well
