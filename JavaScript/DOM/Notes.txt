@@ -9,7 +9,7 @@ user driven type websites are Netflix where you can drive that by your own
 what is web app ? 
 
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Lecture 2 : DOM (document object model )
 this document that we are talking about is the html document
 
@@ -35,18 +35,107 @@ why tree because html elements is itself a hierachical kind of a tree, there exi
 
 link for diagram  : https://media.geeksforgeeks.org/wp-content/uploads/DOMExample-3-1.png
 reference link : https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
-__________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________
 Lecture 3 : JS in HTML
 
 
-___________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________
 Lecture 4 : Script Tags
 Steps how browser loads websites when script tag is also present
 1. the browser fetch the html pages.
 2. It begins parsing the HTML pages and create a dom tree.
-3. while parsing it encounter the script tag refering the external file
-4. Browser request the external file and blocks the parser Hence parsing of html is halted
-5. Once the script is downloaded it is executed subsequently and parser restart
+3. while parsing it encounter the script tag refering the external file.
+4. Browser request the external file and blocks the parser , Hence parsing of html is halted.
+5. Once the script is downloaded it is executed subsequently and parser restart.
 
 
-Any (JS)  is capable to insert its own html doc using various function , That means the parser needs to wait until the script is not just downloaded but executed as well
+Any (JS)  is capable to insert its own html doc using various function , That means the parser needs to wait until the script is not just downloaded but executed as well. 
+_____________________________________________________________________________________________________________________
+Lecture 5 : document object : 
+
+represent All the dom properties available to us via the browser
+
+
+console.dir
+document.domain
+document.title
+console.dir(document.title)
+
+document.title = "S"
+document.URL
+document.head
+document.all
+document.body
+
+
+Reference link : Document Mdn
+
+_____________________________________________________________________________________________________________________
+
+Lecture 6 : getElementById and getElementByName
+
+document.getElementById("{id of the attributes}"
+
+above whole .style  - > you get the css properties
+
+whole thing.fontSize() = 'whatever you give';
+It increase
+
+document.getElementsByClassName("{class Name}")
+document object called and fetched also
+
+
+document.getElementsByTagName("section")[index].style.display = 'none';
+
+_________________________________________________________________________________________________________________________
+Lecture 7 : query selector  (reference - query selector api mdn)
+
+document.querySelector(".image div");
+
+document.querySelectorAll(".image div");                                    doing praactical thing in parallex website
+
+
+_________________________________________________________________________________________________________________________
+
+
+Lecture 8 : Manipulating CSS
+
+1. we can manipulate this by style attribute ,in dom we select by 
+document.getElementById("top-main-text").style ;
+this style property is giving access to an object, it represent inline style of an element , whatever style we are 
+going to change is going to applied on inline style
+
+
+2. document.getElementById("top-main-text").style.fontSize = '100px';
+
+3. document.getElementById("top-main-text").style.cssText = 'color : red; font-size : 100px; letter-spacing: 10px';
+
+4. document.getElementById("top-main-text").style.color;
+you can get property also by storing it some const variable 
+
+5. document.getElementById("top-main-text").style.letterSpacing = '' ;
+
+writing styles like this is not scalable ,actual styles should comes from CSS
+
+.custom{
+letter-spacing:10px;
+color:red;
+font-size:100px;
+}
+
+document.getElementById("top-main-text").classList;
+document.getElementById("top-main-text").classList.add('custom');
+document.getElementById("top-main-text").classList.remove('custom');
+
+
+
+
+________________________________________________________________________________________________________________________
+Lecture 9 : Playing with classList
+
+
+_________________________________________________________________________________________________________________________
+Lecture 10 : innerText and innerHTML
+
+__________________________________________________________________________________________________________________________
+Lecture 11 : Important problem with innerHTML
