@@ -1,10 +1,9 @@
-import {Carousel ,HomePageCard, CarouselCategory, CarouselProduct} from './';
+import {Carousel ,HomePageCard, CarouselCategory, CarouselProduct,} from './';
 
 const HomePage = () => {
   return (
     <div className="bg-amazonclone-background min-w-fit max-w-480">
       <div className='min-w-[1000px] max-w-[1500px] m-auto'>
-          testing  
             <Carousel />
             <div className='grid grid-cols-3 xl:grid-cols-4 -mt-80'>
               <HomePageCard title={"We have a surprise for you"}
